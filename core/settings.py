@@ -28,12 +28,12 @@ SECRET_KEY = 'django-insecure-qam^zg*7ite1p+s1vr5qnf7useapwtz2u@xxr2n81y*2b44o7a
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    'bwumbei.online'
+    'bwumbei.com'
     'portfolio-production-8e3a.up.railway.app'
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://bwumbei.online/'
+    'https://bwumbei.com'
     'https://portfolio-production-8e3a.up.railway.app/'
 ]
 
