@@ -17,7 +17,7 @@
               <div class="flex space-x-4">
                   <!-- Logo -->
                   <div>
-                      <a href="#" class="flex items-center py-5 px-2 text-gray-700 hover:text-gray-900">
+                      <a href="{% url 'home:index' %}" class="flex items-center py-5 px-2 text-gray-700 hover:text-gray-900">
                           <span class="font-bold">Bright Wumbei</span>
                       </a>
                   </div>
@@ -25,10 +25,10 @@
 
               <!-- Primary Nav -->
               <div class="hidden md:flex items-center space-x-1">
-                  <a href="#" class="py-5 px-3 text-gray-700 hover:text-gray-900">About Me</a>
-                  <a href="#" class="py-5 px-3 text-gray-700 hover:text-gray-900">Projects</a>
+                  <a href="{% url 'home:about' %}" class="py-5 px-3 text-gray-700 hover:text-gray-900">About Me</a>
+                  <a href="#projects" class="py-5 px-3 text-gray-700 hover:text-gray-900">Projects</a>
                   <a href="#" class="py-5 px-3 text-gray-700 hover:text-gray-900">Contact Me</a>
-                  <a href="#" class="py-5 px-3 text-gray-700 hover:text-gray-900">Blog</a>
+                  <a href="https://medium.com/@brightwumbei2018" class="py-5 px-3 text-gray-700 hover:text-gray-900">Blog</a>
               </div>
 
               <!-- Mobile Button -->
@@ -43,11 +43,11 @@
       </div>
 
       <!-- Mobile Menu -->
-      <div class="mobile-menu hidden md:hidden">
-          <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200">about</a>
-          <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200">projects</a>
+      <div class="mobile-menu bg-slate-800 text-gray-100 hidden md:hidden">
+          <a href="{% url 'home:about' %}" class="block py-2 px-4 text-sm hover:bg-gray-200">about</a>
+          <a href="#projects" class="block py-2 px-4 text-sm hover:bg-gray-200">projects</a>
           <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200">contact</a>
-          <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200">blog</a>
+          <a href="https://medium.com/@brightwumbei2018" class="block py-2 px-4 text-sm hover:bg-gray-200">blog</a>
       </div>
   </nav>
     {% block content %}
