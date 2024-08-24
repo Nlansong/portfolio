@@ -29,10 +29,12 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     'bwumbei.online'
+    'portfolio-production-8e3a.up.railway.app'
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     'https://bwumbei.online/'
+    'https://portfolio-production-8e3a.up.railway.app/'
 ]
 
 
