@@ -28,8 +28,9 @@ SECRET_KEY = 'django-insecure-qam^zg*7ite1p+s1vr5qnf7useapwtz2u@xxr2n81y*2b44o7a
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'bwumbei.com'
-    'portfolio-production-8e3a.up.railway.app'
+    'bwumbei.com',
+    'portfolio-production-8e3a.up.railway.app',
+    '127.0.0.1'
 ]
 
 CSRF_TRUSTED_ORIGINS = [
@@ -88,16 +89,16 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': BASE_DIR / 'db.sqlite3',
-    # }
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
-DATABASES['default'] = dj_database_url.parse(
-    'postgresql://postgres:BFKWHmiEzHbxYmDDpeaimMwMaNuGhyGX@junction.proxy.rlwy.net:27530/railway',
-    conn_max_age=600,
-    conn_health_checks=True,
-)
+# DATABASES['default'] = dj_database_url.parse(
+#     'postgresql://postgres:BFKWHmiEzHbxYmDDpeaimMwMaNuGhyGX@junction.proxy.rlwy.net:27530/railway',
+#     conn_max_age=600,
+#     conn_health_checks=True,
+# )
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
