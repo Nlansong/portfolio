@@ -1,0 +1,77 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <title>{% block title %} {{project.title}} {% endblock %} |Bright Wumbei</title>
+  </head>
+  <body class="container-fluid " >
+    <nav class="bg-slate-200 text-gray-100 shadow-lg">
+      <div class="max-w-7xl mx-auto px-4">
+          <div class="flex justify-between">
+              <div class="flex space-x-4">
+                  <!-- Logo -->
+                  <div>
+                      <a href="{% url 'home:index' %}" class="flex items-center py-5 px-2 text-gray-700 hover:text-gray-900">
+                          <span class="font-bold">Bright Wumbei</span>
+                      </a>
+                  </div>
+              </div>
+
+              <!-- Primary Nav -->
+              <div class="hidden md:flex items-center space-x-1">
+                  <a href="#" class="py-5 px-3 text-gray-700 hover:text-gray-900">About Me</a>
+                  <a href="#" class="py-5 px-3 text-gray-700 hover:text-gray-900">Projects</a>
+                  <a href="#" class="py-5 px-3 text-gray-700 hover:text-gray-900">Contact Me</a>
+                  <a href="#" class="py-5 px-3 text-gray-700 hover:text-gray-900">Blog</a>
+              </div>
+
+              <!-- Mobile Button -->
+              <div class="md:hidden flex items-center">
+                  <button id="menu-btn" class="mobile-menu-button">
+                      <svg class="w-6 h-6 text-gray-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                      </svg>
+                  </button>
+              </div>
+          </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="mobile-menu hidden md:hidden">
+          <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200">about</a>
+          <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200">projects</a>
+          <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200">contact</a>
+          <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200">blog</a>
+      </div>
+  </nav>
+    {% block content %}
+        <section class="flex flex-row mx-auto items-center justify-center" >
+            <div class="py-4 border-1 shadow-lg" >
+                <h1 class="text-2xl text-gray-600" >  {{project.title}} </h1>
+                <p> {{project.tags}} </p>
+                <div>
+                    <img src="{{project.picture.url}} " alt="{{project.title}}">
+                </div>
+                <p class="text-lg text-gray-600" > {{project.body}} </p>
+            </div>
+           
+        </section>
+    
+    {% endblock %}
+    {% include 'footer.html' %}
+    <script>
+      const btn = document.getElementById('menu-btn');
+      const menu = document.querySelector('.mobile-menu');
+
+      btn.addEventListener('click', () => {
+          menu.classList.toggle('hidden');
+      });
+  </script>
+  </body>
+</html>
