@@ -25,9 +25,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-qam^zg*7ite1p+s1vr5qnf7useapwtz2u@xxr2n81y*2b44o7a'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'bwumbei.online'
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://bwumbei.online/'
+]
 
 
 # Application definition
