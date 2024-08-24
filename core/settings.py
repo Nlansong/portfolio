@@ -24,8 +24,8 @@ ALLOWED_HOSTS = [
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://bwumbei.com/'
-    #'https://portfolio-production-8e3a.up.railway.app/'
+    'https://bwumbei.com',
+    
 ]
 
 
