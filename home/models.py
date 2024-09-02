@@ -1,5 +1,6 @@
 from django.db import models
 from django_ckeditor_5.fields import CKEditor5Field
+from django.utils.text import slugify
 
 
 # Create your models here.
@@ -16,8 +17,11 @@ class Project(models.Model):
     meta_description = models.CharField(max_length=150, blank=True)
     date_created = models.DateTimeField(auto_now_add=True)
     tags = models.ManyToManyField(Tag, blank=True)
-    picture = models.ImageField(upload_to='media/images')
+    picture = models.ImageField(upload_to='images')
     body = CKEditor5Field('Text', config_name='extends')
+    
+    
+    
     
     class Meta:
         ordering = ["-date_created"]  

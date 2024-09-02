@@ -9,12 +9,6 @@ def index(request):
     }
     return render(request, 'index.html', context)
 
-def project(request, pk):
-    project = get_object_or_404(Project, pk=pk)
-    context = {
-        'project':project
-    }
-    return render(request, 'project.html', context)
 
 def about(request):
     return render(request, 'about.html')
@@ -25,3 +19,11 @@ def projects(request):
         'projects':projects
     }
     return render(request, 'projects.html', context)
+
+def project(request, pk):
+    project = get_object_or_404(Project, pk=pk)
+    context = {
+        'project':project,
+        
+    }
+    return render(request, 'project.html', context)
