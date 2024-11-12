@@ -15,17 +15,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-qam^zg*7ite1p+s1vr5qnf7useapwtz2u@xxr2n81y*2b44o7a'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     'bwumbei.com',
-   # 'portfolio-production-8e3a.up.railway.app',
+    # 'portfolio-production-8e3a.up.railway.app',
     '127.0.0.1'
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     'https://bwumbei.com',
-    
+
 ]
 
 
@@ -40,8 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'home',
-    'django_ckeditor_5',  
-    
+    'django_ckeditor_5',
+
 ]
 
 MIDDLEWARE = [
@@ -137,43 +137,39 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 
-
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 customColorPalette = [
-        {
-            'color': 'hsl(0°, 0%, 0%)',
-            'label': 'Red'
-        },
-        {
-            'color': 'hsl(0°, 0%, 0%)',
-            'label': 'Pink'
-        },
-        {
-            'color': 'hsl(0°, 0%, 0%)',
-            'label': 'Purple'
-        },
-        {
-            'color': 'hsl(0°, 0%, 0%)',
-            'label': 'Deep Purple'
-        },
-        {
-            'color': 'hsl(0°, 0%, 0%)',
-            'label': 'Indigo'
-        },
-        {
-            'color': 'hsl(0°, 0%, 0%)',
-            'label': 'Blue'
-        },
-    ]
+    {
+        'color': 'hsl(0°, 0%, 0%)',
+        'label': 'Red'
+    },
+    {
+        'color': 'hsl(0°, 0%, 0%)',
+        'label': 'Pink'
+    },
+    {
+        'color': 'hsl(0°, 0%, 0%)',
+        'label': 'Purple'
+    },
+    {
+        'color': 'hsl(0°, 0%, 0%)',
+        'label': 'Deep Purple'
+    },
+    {
+        'color': 'hsl(0°, 0%, 0%)',
+        'label': 'Indigo'
+    },
+    {
+        'color': 'hsl(0°, 0%, 0%)',
+        'label': 'Blue'
+    },
+]
 
 CKEDITOR_5_CUSTOM_CSS = 'css/ckeditor5/admin_dark_mode_fix.css'
-
-
-
 
 
 CKEDITOR_5_CONFIGS = {
@@ -191,7 +187,7 @@ CKEDITOR_5_CONFIGS = {
             'blockQuote',
         ],
         'toolbar': ['heading', '|', 'outdent', 'indent', '|', 'bold', 'italic', 'link', 'underline', 'strikethrough',
-        'code','subscript', 'superscript', 'highlight', '|', 'codeBlock', 'sourceEditing', 'insertImage',
+                    'code', 'subscript', 'superscript', 'highlight', '|', 'codeBlock', 'sourceEditing', 'insertImage',
                     'bulletedList', 'numberedList', 'todoList', '|',  'blockQuote', 'imageUpload', '|',
                     'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor', 'mediaEmbed', 'removeFormat',
                     'insertTable',],
@@ -208,8 +204,8 @@ CKEDITOR_5_CONFIGS = {
 
         },
         'table': {
-            'contentToolbar': [ 'tableColumn', 'tableRow', 'mergeTableCells',
-            'tableProperties', 'tableCellProperties' ],
+            'contentToolbar': ['tableColumn', 'tableRow', 'mergeTableCells',
+                               'tableProperties', 'tableCellProperties'],
             'tableProperties': {
                 'borderColors': customColorPalette,
                 'backgroundColors': customColorPalette
@@ -219,12 +215,16 @@ CKEDITOR_5_CONFIGS = {
                 'backgroundColors': customColorPalette
             }
         },
-        'heading' : {
+        'heading': {
             'options': [
-                { 'model': 'paragraph', 'title': 'Paragraph', 'class': 'ck-heading_paragraph' },
-                { 'model': 'heading1', 'view': 'h1', 'title': 'Heading 1', 'class': 'ck-heading_heading1' },
-                { 'model': 'heading2', 'view': 'h2', 'title': 'Heading 2', 'class': 'ck-heading_heading2' },
-                { 'model': 'heading3', 'view': 'h3', 'title': 'Heading 3', 'class': 'ck-heading_heading3' }
+                {'model': 'paragraph', 'title': 'Paragraph',
+                    'class': 'ck-heading_paragraph'},
+                {'model': 'heading1', 'view': 'h1', 'title': 'Heading 1',
+                    'class': 'ck-heading_heading1'},
+                {'model': 'heading2', 'view': 'h2', 'title': 'Heading 2',
+                    'class': 'ck-heading_heading2'},
+                {'model': 'heading3', 'view': 'h3',
+                    'title': 'Heading 3', 'class': 'ck-heading_heading3'}
             ]
         }
     },
@@ -236,5 +236,3 @@ CKEDITOR_5_CONFIGS = {
         }
     }
 }
-
-
